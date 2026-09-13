@@ -1,0 +1,20 @@
+{
+    "geode": "4.5.0",
+    "gd": {
+        "android": "2.2081"
+    },
+    "version": "v1.0.0",
+    "id": "dav.fps-bypass",
+    "name": "DAV FPS Bypass",
+    "developer": "DAV",
+    "description": "Physics/FPS bypass, FPS counter, dan sistem replay input untuk Geometry Dash (Android 2.2081).",
+    "repository": "",
+    "android32": true,
+    "android64": true,
+    "windows": false,
+    "mac": false,
+    "ios": false,
+    "resources": {
+        "spritesheets": {}
+    }
+}
