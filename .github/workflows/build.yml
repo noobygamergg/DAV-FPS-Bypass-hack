@@ -1,1 +1,30 @@
+name: Build DAV FPS Bypass
 
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build Geode Mod
+        uses: geode-sdk/build-geode-mod@main
+        id: build
+        with:
+          sdk: given
+          cli: latest
+          target: Android64
+          build-config: Release
+
+      - name: Upload .geode
+        uses: actions/upload-artifact@v4
+        with:
+          name: DAV-FPS-Bypass-Android64
+          path: ${{ steps.build.outputs.build-output }}
